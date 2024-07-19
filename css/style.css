@@ -1,0 +1,175 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 5rem;
+  padding: 0rem;
+  background-color: #121212;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: -100rem;
+}
+
+.profile {
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: -75px;
+  border: 2px solid #fff;
+}
+
+h1 {
+  margin: 10px 0 5px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glowing-button {
+  display: inline-block;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  position: relative;
+  font-size: 17px;
+  margin: 10px 0;
+  transition: all 0.4s ease;
+}
+
+.glowing-button::before,
+.glowing-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #00f;
+  box-shadow: 0 0 20px #00f, 0 0 40px #00f, 0 0 60px #00f;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.glowing-button::before {
+  transform: scale(1.2);
+}
+
+.glowing-button:hover::before,
+.glowing-button:hover::after,
+.glowing-button:focus::before,
+.glowing-button:focus::after,
+.glowing-button:active::before,
+.glowing-button:active::after {
+  opacity: 1;
+  border-radius: 20px;
+  transform: scale(1);
+}
+
+.glowing-button:hover,
+.glowing-button:focus,
+.glowing-button:active {
+  border: 2px solid #00f;
+  border-radius: 20px;
+  color: #00f;
+  text-shadow: 0 0 10px #00f;
+}
+
+.glowing-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #00f;
+  border-radius: 20px;
+  animation: dash 1.5s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+/* footer */
+
+footer {
+  min-width: 100rem;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 30rem;
+}
+
+footer .socials {
+  padding: 2rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #00f;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 7rem;
+}
+
+.socials i {
+  font-size: 28px;
+}
+
+.socials ion-icon {
+  font-size: 28px;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #fff;
+  font-weight: 700;
+}
