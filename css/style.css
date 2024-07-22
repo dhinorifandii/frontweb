@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "oswald", sans-serif;
   margin: 5rem;
   padding: 0rem;
   background-color: #121212;
@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 main {
@@ -61,10 +62,10 @@ h2 {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #fff;
   border-radius: 20px;
   position: relative;
-  font-size: 17px;
+  font-size: 20px;
   margin: 10px 0;
   transition: all 0.4s ease;
 }
@@ -81,6 +82,7 @@ h2 {
   box-shadow: 0 0 20px #00f, 0 0 40px #00f, 0 0 60px #00f;
   opacity: 0;
   transition: all 0.4s ease;
+  border-radius: 20px;
 }
 
 .glowing-button::before {
@@ -90,19 +92,14 @@ h2 {
 .glowing-button:hover::before,
 .glowing-button:hover::after,
 .glowing-button:focus::before,
-.glowing-button:focus::after,
-.glowing-button:active::before,
-.glowing-button:active::after {
+.glowing-button:focus::after {
   opacity: 1;
-  border-radius: 20px;
   transform: scale(1);
 }
 
 .glowing-button:hover,
-.glowing-button:focus,
-.glowing-button:active {
+.glowing-button:focus {
   border: 2px solid #00f;
-  border-radius: 20px;
   color: #00f;
   text-shadow: 0 0 10px #00f;
 }
@@ -115,8 +112,8 @@ h2 {
   width: 100%;
   height: 100%;
   border: 2px dashed #00f;
-  border-radius: 20px;
   animation: dash 1.5s linear infinite;
+  border-radius: 20px;
 }
 
 @keyframes dash {
@@ -124,7 +121,6 @@ h2 {
     stroke-dashoffset: 1000;
   }
 }
-
 /* footer */
 
 footer {
@@ -172,4 +168,106 @@ footer .credit {
 footer .credit a {
   color: #fff;
   font-weight: 700;
+}
+
+.close-icon i {
+  font-size: 230px; /* adjust the font size to your liking */
+  color: #fff; /* adjust the color to your liking */
+}
+
+/* Mobile Devices (Portrait) */
+@media only screen and (max-width: 480px) {
+  header {
+    font-size: 1.2em;
+  }
+
+  section {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .service h3 {
+    font-size: 1.2em;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+/* Tablets (Portrait) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    font-size: 1.4em;
+  }
+
+  section {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .service h3 {
+    font-size: 1.4em;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+}
+
+/* Tablets (Landscape) and Small Desktops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    font-size: 1.6em;
+  }
+
+  section {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .service h3 {
+    font-size: 1.6em;
+  }
+
+  footer {
+    font-size: 1.1em;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1025px) {
+  header {
+    font-size: 1.8em;
+  }
+
+  section {
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1200px;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  .service h3 {
+    font-size: 1.8em;
+  }
+
+  footer {
+    font-size: 1.2em;
+  }
 }
